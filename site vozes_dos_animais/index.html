@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vozes dos Animais</title>
+    <link rel="shortcut icon" href="img/gato.png">
+    <link rel="stylesheet" href="index.css" type="text/css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav-cabecalho">
+            <a href="#">Início</a>
+            <a href="#sobre">Sobre Nós</a>
+            <a href="#contato">Fale Conosco</a>
+            <a href="#como-funciona">Como Funciona</a>
+        </nav>
+        <h1>Vozes dos Animais</h1>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Juntos pela proteção dos animais</h2>
+            <p>Conscientização sobre abandono e maus-tratos.</p>
+            <button onclick="document.getElementById('como-funciona').scrollIntoView();">Saiba Mais</button>
+        </section>
+
+        <section id="sobre" class="sobre">
+            <center>
+                <h2>Quem Somos?</h2>
+            </center>
+            <div class="conteudo-sobre">
+                <p>Nós somos a equipe do projeto <strong>Vozes dos Animais</strong>, um grupo de apaixonados por animais
+                    que se uniu para lutar contra o abandono e os maus-tratos. Acreditamos que cada animal merece amor,
+                    respeito e um lar seguro. Nossa missão é conscientizar a sociedade sobre a importância da proteção
+                    animal e promover a adoção responsável.</p>
+            </div>
+            <div class="container-imagem">
+                <img src="img/cachorrofeio2.jfif" alt="Animais">
+                <div class="palavras-motivacionais">
+                    <p>AMOR</p>
+                    <p>RESPEITO</p>
+                    <p>COMPANHEIRISMO</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="como-funciona" class="como-funciona">
+            <center>
+                <h2>O Que Fazemos?</h2>
+            </center>
+            <div class="conteudo-como-funciona">
+                <p>Atuamos em diversas frentes para impactar positivamente a vida dos animais. Realizamos campanhas de
+                    conscientização em escolas e comunidades, onde educamos as pessoas sobre a importância da guarda
+                    responsável e os cuidados que os animais necessitam. Além disso, trabalhamos em parceria com abrigos
+                    e organizações não governamentais, oferecendo suporte e promovendo eventos de adoção.</p>
+            </div>
+            <div class="container-imagem">
+                <img src="img/gato.png" alt="Como Funciona" id="imagem-gato" style="cursor: pointer;">
+            </div>
+        </section>
+
+        <section class="contato" id="contato">
+            <center>
+                <h2>Fale Conosco</h2>
+            </center>
+            <center>
+                <p>Entre em contato para saber como ajudar!</p>
+            </center>
+            <div class="container-imagem">
+                <img src="img/dog.png" width="100px" height="100px" alt="Ajuda aos Animais">
+                <a href="https://www.instagram.com/vozes_dos_animais/profilecard/?igsh=MTM4eHFpaHA0OThsbw=="
+                    target="_blank">
+                    <img src="img/contato.jpeg" width="100px" height="100px" alt="Contato">
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="rodape">
+        <p>&copy; 2024 Vozes dos Animais. Todos os direitos reservados.</p>
+    </footer>
+
+    <div class="popup" id="popup">
+        <span class="popup-fechar" onclick="fecharPopup()">✖</span>
+        <p>Me adote!</p>
+    </div>
+
+    <script>
+        document.getElementById('imagem-gato').addEventListener('click', function () {
+            document.getElementById('popup').classList.add('ativo');
+        });
+
+        function fecharPopup() {
+            document.getElementById('popup').classList.remove('ativo');
+        }
+    </script>
+
+    <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+        <img src="img/kasa.png" alt="Voltar ao Início" class="icone-inicio">
+    </a>
+</body>
+
+</html>
